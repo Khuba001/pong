@@ -20,5 +20,7 @@ class Ball(Turtle):
         # TILL IT HITS BOTTOM WALL AND * -1 MAKE IT POSITIVE AGAIN
         self.y_move *= -1
 
-
+    def deflect(self):
+        # SAME AS BOUNCE BUT WITH THE X COORDINATE
+        self.x_move *= -1
 

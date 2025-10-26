@@ -40,6 +40,9 @@ while game_on:
     if ball.ycor() > 280 or ball.ycor() < -280:
         ball.bounce()
 
+#   DETECT COLLISION WITH A PADDLE
+    if ball.distance(r_paddle) < 50 and ball.xcor() > 340 or ball.distance(l_paddle) < 50 and ball.xcor() < -340:
+        ball.deflect()
 
 
 
