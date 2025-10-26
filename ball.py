@@ -6,8 +6,19 @@ class Ball(Turtle):
         self.shape('circle')
         self.penup()
         self.color('white')
+        # SPEED OF WHICH THE BALL MOVES
+        self.x_move = 10
+        self.y_move = 10
 
     def move_ball(self):
-        x = self.xcor()
-        y = self.ycor()
-        self.goto(x + 10, y + 10)
+        x = self.xcor() + self.x_move
+        y = self.ycor() + self.y_move
+        self.goto(x, y)
+
+    def bounce(self):
+        # WHEN BALL HITS WALL THE SPEED IS NOW -10 AND THE BALL MOVES DOWN
+        # TILL IT HITS BOTTOM WALL AND * -1 MAKE IT POSITIVE AGAIN
+        self.y_move *= -1
+
+
+

@@ -32,8 +32,13 @@ game_on = True
 
 while game_on:
     time.sleep(0.1)
+
     ball.move_ball()
     screen.update()
+
+    # DETECT COLLISION WITH WALLS
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        ball.bounce()
 
 
 
